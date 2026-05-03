@@ -6,6 +6,7 @@ export default defineConfig(({ mode }) => {
   const apiOrigin = env.VITE_PSINFO_ORIGIN || 'http://127.0.0.1:8000'
 
   return {
+    base: '/mobile/psinfo/',
     plugins: [vue()],
     server: {
       proxy: {
