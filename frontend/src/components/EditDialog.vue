@@ -1,6 +1,6 @@
 <template>
   <Teleport to="body">
-    <div class="dialog-overlay--center" @click.self="onCancel">
+    <div class="dialog-overlay--center">
       <div class="dialog dialog--center">
         <div class="dialog-header">
           <h2 class="dialog-title">{{ isNew ? '新規登録' : '編集' }}</h2>
