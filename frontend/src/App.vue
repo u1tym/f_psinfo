@@ -2,6 +2,14 @@
   <div class="app">
     <!-- ヘッダ -->
     <header class="app-header">
+      <button
+        type="button"
+        class="header-back-btn"
+        aria-label="メニューに戻る"
+        @click="goBackToMenu"
+      >
+        ‹ 戻る
+      </button>
       <h1 class="app-title">パスワード管理</h1>
     </header>
 
@@ -254,6 +262,10 @@ function showToast(message: string, type: 'success' | 'error') {
   toastTimer = setTimeout(() => { toast.value = null }, 3000)
 }
 
+function goBackToMenu() {
+  window.location.assign('/mobile/login/#/menu')
+}
+
 onMounted(() => fetchList())
 </script>
 
@@ -303,10 +315,33 @@ html, body {
   gap: 8px;
 }
 
+.header-back-btn {
+  flex-shrink: 0;
+  padding: 8px 10px 8px 4px;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  line-height: 1;
+  transition: background .15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header-back-btn:hover,
+.header-back-btn:active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
 .app-title {
+  flex: 1;
   font-size: 18px;
   font-weight: 700;
   letter-spacing: .05em;
+  min-width: 0;
 }
 
 /* 検索バー */
