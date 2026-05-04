@@ -281,6 +281,8 @@ onMounted(() => fetchList())
 
 html, body {
   height: 100%;
+  /* iOS Safari: ページ全体の縦バウンス／オーバースクロールを抑止 */
+  overscroll-behavior-y: none;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', sans-serif;
   font-size: 15px;
   background: #f0f2f5;
@@ -289,6 +291,7 @@ html, body {
 
 #app {
   height: 100%;
+  overscroll-behavior-y: none;
 }
 
 /* ============================================================
@@ -298,6 +301,7 @@ html, body {
   display: flex;
   flex-direction: column;
   height: 100dvh;
+  overscroll-behavior-y: none;
   max-width: 480px;
   margin: 0 auto;
   background: #fff;
@@ -389,6 +393,7 @@ html, body {
   flex: 1 1 0;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
 }
 
 /* テーブル */
@@ -519,6 +524,7 @@ html, body {
   padding: 48px 16px 16px;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
 }
 
 .dialog {
@@ -571,6 +577,7 @@ html, body {
   overflow-y: auto;
   padding: 16px;
   -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
 }
 
 .dialog-footer {
